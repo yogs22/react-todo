@@ -30,3 +30,20 @@
     transform: rotate(360deg);
   }
 }
+
+input {
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.btn {
+    padding: 10px 16px;
+    border: none;
+}
+
+.btn-primary {
+    background: #149cd6;
+    color: #fff;
+    border: 2px solid #149cd6;
+    border-radius: 3px;
+}
