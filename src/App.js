@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './Header';
 import './App.css';
 
 class App extends Component {
@@ -22,10 +23,15 @@ class App extends Component {
         return false;
     }
 
+    removeTodo = (i) => {
+        this.state.todos.splice(i, 1);
+        this.setState({ todos: this.state.todos });
+    }
+
     render() {
         return (
           <div className="App">
-              <h1>Todo Application</h1>
+                <Header />
                 <form ref="form">
                   <input type="text" ref="time" placeholder="Time activity" />
                   <input type="text" ref="activity" placeholder="The activity" />
@@ -36,7 +42,7 @@ class App extends Component {
                   <ul>
                       { this.state.todos.map((data, i) =>
                           <li key={i}>
-                              <button onClick={ ()=> this.removeTodo(i) } class="btn btn-danger">Delete</button> { data.time } - { data.activity }
+                              <button onClick={ ()=> this.removeTodo(i) } class="btn btn-danger">Delete</button>&nbsp; { data.time } - { data.activity }
                           </li>
                       ) }
                   </ul>
