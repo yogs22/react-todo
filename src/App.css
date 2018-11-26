@@ -37,18 +37,35 @@ input {
 }
 
 hr {
-  border: 1px solid aliceblue;
-  margin: 20px;
+    border: 1px solid aliceblue;
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 20px;
+    margin: 10px;
+    border-bottom: 1px solid aliceblue;
 }
 
 .btn {
     padding: 10px 16px;
     border: none;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .btn-primary {
     background: #149cd6;
     color: #fff;
     border: 2px solid #149cd6;
-    border-radius: 3px;
+}
+
+.btn-danger {
+    background: crimson;
+    color: #fff;
+    border: 2px solid crimson;
 }
