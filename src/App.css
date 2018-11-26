@@ -36,6 +36,11 @@ input {
     margin-right: 20px;
 }
 
+hr {
+  border: 1px solid aliceblue;
+  margin: 20px;
+}
+
 .btn {
     padding: 10px 16px;
     border: none;
