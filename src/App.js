@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import { CSSTransitionGroup } from 'react-transition-group';
 import './App.css';
 
 class App extends Component {
@@ -40,11 +41,18 @@ class App extends Component {
               <hr />
               <div>
                   <ul>
-                      { this.state.todos.map((data, i) =>
-                          <li key={i}>
-                              <button onClick={ ()=> this.removeTodo(i) } class="btn btn-danger">Delete</button>&nbsp; { data.time } - { data.activity }
-                          </li>
-                      ) }
+                      <CSSTransitionGroup
+                        transitionName="animasi"
+                        transitionEnter="{true}"
+                        transitionEnterTimeout={500}
+                        transitionLeave={true}
+                        transitionLeaveTimeout={500}>
+                          { this.state.todos.map((data, i) =>
+                              <li key={i}>
+                                  <button onClick={ ()=> this.removeTodo(i) } class="btn btn-danger">Delete</button>&nbsp; { data.time } - { data.activity }
+                              </li>
+                          ) }
+                      </CSSTransitionGroup>
                   </ul>
               </div>
           </div>

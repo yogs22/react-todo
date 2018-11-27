@@ -69,3 +69,22 @@ ul li {
     color: #fff;
     border: 2px solid crimson;
 }
+
+/* Animation */
+
+.animasi-enter {
+    opacity: 0.01;
+}
+
+.animasi-enter.animasi-enter-active {
+    transition: opacity 500ms ease-in;
+}
+
+.animasi-leave {
+    opacity: 1;
+}
+
+.animasi-leave.animasi-leave-active {
+    transform: translateX(-100%);
+    transition: all 500ms ease-in;
+}
