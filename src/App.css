@@ -1,21 +1,90 @@
-.app {
-  display: block;
+.App {
+  text-align: center;
 }
-.main {
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
-  flex-basis: 60%;
   flex-direction: column;
-  background-color: grey;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
-.homestays {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
+
+.App-link {
+  color: #61dafb;
 }
-.peta {
-  flex-grow: 1;
-  height: 100vh;
-  top: 0;
-  position: sticky;
-  background-color: steelblue;
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+input {
+    padding: 10px;
+    margin-right: 20px;
+}
+
+hr {
+    border: 1px solid aliceblue;
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 20px;
+    margin: 10px;
+    border-bottom: 1px solid aliceblue;
+}
+
+.btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #149cd6;
+    color: #fff;
+    border: 2px solid #149cd6;
+}
+
+.btn-danger {
+    background: crimson;
+    color: #fff;
+    border: 2px solid crimson;
+}
+
+/* Animation */
+
+.animasi-enter {
+    opacity: 0.01;
+}
+
+.animasi-enter.animasi-enter-active {
+    transition: opacity 500ms ease-in;
+}
+
+.animasi-leave {
+    opacity: 1;
+}
+
+.animasi-leave.animasi-leave-active {
+    transform: translateX(-100%);
+    transition: all 500ms ease-in;
 }
